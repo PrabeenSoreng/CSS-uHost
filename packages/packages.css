@@ -1,0 +1,95 @@
+main {
+    padding-top: 2rem;
+}
+
+.background {
+    background: url('../images/plans-background.jpg') center/cover;
+    filter: grayscale(40%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.plans {
+    width: 75%;
+    margin: 1rem 0.3rem;
+    border: 1px solid #0e4f1f;
+    position: relative;
+    z-index: 0;
+}
+
+.plans:hover,
+.plans:active {
+    box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
+}
+
+.plans a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+}
+
+.plan-title {
+    color: black;
+}
+
+.plan-badge {
+    position: absolute;
+    margin: 1.25rem;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
+    color: white;
+    background: #ff5454;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+.plan-info {
+    color: #979797;
+}
+
+.plan-description {
+    padding: 1rem;
+    border: 1px solid #0e4f1f;
+    font-size: 1.25rem;
+    color: #0e4f1f;
+    background: white;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    text-align: right;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95)
+}
+
+#premium .plan-title {
+    color: white;
+}
+
+#premium .plan-info {
+    color: #bbb;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media (min-width: 40rem) {
+    main {
+        max-width: 1500;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
