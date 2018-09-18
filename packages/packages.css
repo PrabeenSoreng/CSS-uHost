@@ -4,6 +4,7 @@ main {
 
 .background {
     background: url('../images/plans-background.jpg') center/cover;
+    -webkit-filter: grayscale(40%);
     filter: grayscale(40%);
     position: fixed;
     width: 100vw;
@@ -22,7 +23,9 @@ main {
 
 .plans:hover,
 .plans:active {
+    -webkit-box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
     box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
+    -webkit-animation: push-up 1s ease-out forwards;
     animation: push-up 1s ease-out forwards;
 }
 
@@ -47,7 +50,11 @@ main {
     background: #ff5454;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    -webkit-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    -ms-transform: rotate(45deg) translateX(3.5rem) translateY(-1rem);
     transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
     width: 12rem;
     text-align: center;
@@ -99,14 +106,32 @@ main {
     }
 }
 
-@keyframes push-up {
+@-webkit-keyframes push-up {
     0% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     33% {
+        -webkit-transform: translateY(-1.5rem);
         transform: translateY(-1.5rem);
     }
     100% {
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes push-up {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    33% {
+        -webkit-transform: translateY(-1.5rem);
+        transform: translateY(-1.5rem);
+    }
+    100% {
+        -webkit-transform: translateY(-1rem);
         transform: translateY(-1rem);
     }
 }

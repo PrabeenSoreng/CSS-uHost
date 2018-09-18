@@ -3,6 +3,9 @@ body {
 }
 
 #product-overview {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(80, 98, 18, 0.6)), to(transparent)), url("freedom.jpg") top/cover no-repeat border-box, #ff1b68;
+    background: -webkit-linear-gradient(bottom, rgba(80, 98, 18, 0.6) 10%, transparent), url("freedom.jpg") top/cover no-repeat border-box, #ff1b68;
+    background: -o-linear-gradient(bottom, rgba(80, 98, 18, 0.6) 10%, transparent), url("freedom.jpg") top/cover no-repeat border-box, #ff1b68;
     background: linear-gradient(to top, rgba(80, 98, 18, 0.6) 10%, transparent), url("freedom.jpg") top/cover no-repeat border-box, #ff1b68;
     width: 100vw;
     height: 33vh;
@@ -52,6 +55,7 @@ body {
     color: #19b84c;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    -webkit-box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
     box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
 }
 
@@ -84,8 +88,14 @@ body {
 @media (min-width: 40rem) {
     .plan__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     .plan {
@@ -93,13 +103,21 @@ body {
         height: 28rem;
         min-width: 12.8rem;
         max-width: 25rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
     .plan--highlighted {
         z-index: 50;
         height: 30rem;
+        -webkit-box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
         box-shadow: 2px 2px 16px 8px rgb(0, 0, 0, 0.2);
     }
 }
@@ -145,7 +163,11 @@ body {
 
 @media (min-width: 40rem) {
     .key-feature__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .key-feature__list li {
@@ -158,14 +180,21 @@ body {
     position: fixed;
     width: 40%;
     opacity: 0;
+    -webkit-transform: translateY(-50rem);
+    -ms-transform: translateY(-50rem);
     transform: translateY(-50rem);
+    -webkit-transition: opacity 200ms, -webkit-transform 300ms ease-out;
+    transition: opacity 200ms, -webkit-transform 300ms ease-out;
+    -o-transition: opacity 200ms, transform 300ms ease-out;
     transition: opacity 200ms, transform 300ms ease-out;
+    transition: opacity 200ms, transform 300ms ease-out, -webkit-transform 300ms ease-out;
     z-index: 200;
     top: 20%;
     left: 30%;
     background: white;
     padding: 1rem;
     border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
